@@ -1,0 +1,328 @@
+/* ====== PÁGINA PROFESORES ====== */
+
+/* Migas de pan */
+.breadcrumb {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  font-size: 0.95rem;
+  color: var(--muted);
+}
+.breadcrumb .crumb {
+  text-decoration: none;
+}
+.breadcrumb .crumb:hover {
+  text-decoration: underline;
+}
+.breadcrumb .current {
+  color: var(--text);
+}
+
+/* Grid general */
+.team-grid {
+  display: grid;
+  gap: 22px;
+}
+
+/* Tarjetas */
+.teacher-card {
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  gap: 18px;
+  background: var(--bg-contrast);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 18px;
+  align-items: start;
+  transition: box-shadow 0.3s ease, transform 0.25s ease;
+}
+.teacher-card:hover {
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.08);
+  transform: translateY(-2px);
+}
+
+/* Avatar */
+.avatar {
+  overflow: hidden;
+  border-radius: calc(var(--radius) - 6px);
+}
+.avatar img {
+  width: 100%;
+  height: 100%;
+  aspect-ratio: 16 / 9; /* mantiene el layout estable (menos CLS) */
+  object-fit: cover;
+  object-position: 50% 40%;
+}
+
+/* Bio */
+.bio {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.bio-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.name {
+  font-family: "Cormorant Garamond", serif;
+  font-weight: 600;
+  font-size: 1.6rem;
+  margin: 0.2rem 0;
+}
+
+.tags {
+  display: flex;
+  gap: 8px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.chip {
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  padding: 4px 10px;
+  border-radius: 999px;
+  font-size: 0.85rem;
+  color: var(--muted);
+}
+
+.summary {
+  color: var(--text);
+  margin: 2px 0 0;
+}
+
+.meta {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  color: var(--muted);
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 4px 10px;
+}
+
+.meta strong {
+  color: var(--text);
+  font-weight: 600;
+}
+
+.meta-item {
+  font-size: 0.95rem;
+}
+
+.meta-link {
+  margin-left: auto;
+}
+
+.meta-btn {
+  display: inline-block;
+  padding: 6px 12px;
+  border-radius: 999px;
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  font-size: 0.9rem;
+  background: #fff;
+  color: var(--accent);
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.meta-btn:hover {
+  border-color: var(--accent);
+  background: var(--accent);
+  color: #fff;
+  box-shadow: 0 4px 12px rgba(201, 161, 91, 0.25);
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .teacher-card {
+    grid-template-columns: 220px 1fr;
+  }
+}
+
+@media (max-width: 700px) {
+  .teacher-card {
+    grid-template-columns: 1fr;
+  }
+  .avatar img {
+    aspect-ratio: 3 / 2;
+  }
+}
+
+/* ===== REVEAL ANIMATION (coherente con el sitio) ===== */
+[data-reveal] {
+  opacity: 0;
+  transform: translateY(14px);
+  transition: opacity 0.6s ease, transform 0.7s ease;
+  transition-delay: var(--delay, 0ms);
+}
+
+[data-reveal].revealed {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  [data-reveal] {
+    transition: none;
+    transform: none;
+  }
+}
+
+/* ===== Botón discreto para "Regresar" ===== */
+.logo-return {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  text-decoration: none;
+  color: var(--muted);
+  font-weight: 500;
+  transition: all 0.25s ease;
+}
+
+.logo-return img {
+  height: 40px;
+  width: auto;
+  border-radius: 50%;
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.logo-return span {
+  font-size: 1rem;
+}
+
+.logo-return:hover {
+  color: var(--accent);
+}
+
+.logo-return:hover img {
+  transform: rotate(-8deg) scale(1.05);
+  filter: brightness(1.1);
+}
+
+/* Fila CTA específica de Profesores */
+.cta-row-profes {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 12px;
+}
+
+@media (min-width: 720px) {
+  .cta-row-profes {
+    justify-content: flex-start;
+  }
+  .cta-row-profes .logo-return {
+    margin-left: 20px; /* empuja "Regresar" hacia la derecha en desktop */
+  }
+}
+
+/* ===== PÁGINA DETALLE PROFESOR ===== */
+
+.teacher-detail {
+  display: grid;
+  grid-template-columns: minmax(260px, 320px) minmax(0, 1fr);
+  gap: 22px;
+  align-items: flex-start;
+}
+
+/* Foto grande a la izquierda */
+.teacher-detail-avatar {
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: var(--shadow);
+  background: var(--bg-contrast);
+}
+.teacher-detail-avatar img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  aspect-ratio: 3 / 4; /* formato retrato */
+}
+
+/* Columna de texto */
+.teacher-detail-bio {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* “Hatha Yoga · Hatha Flow” */
+.teacher-detail-tagline {
+  font-family: "Cormorant Garamond", serif;
+  font-style: italic;
+  font-size: 1.1rem;
+  color: var(--accent);
+  margin: 0;
+}
+
+/* Datos cortos debajo del nombre */
+.teacher-detail-meta {
+  list-style: none;
+  padding: 0;
+  margin: 6px 0 0;
+  color: var(--muted);
+  display: grid;
+  gap: 4px;
+  font-size: 0.98rem;
+}
+.teacher-detail-meta strong {
+  color: var(--text);
+  font-weight: 600;
+}
+
+/* Cuerpo de la biografía */
+.teacher-detail-body p {
+  margin: 0 0 0.7em;
+  color: var(--text);
+  font-size: 0.98rem;
+  line-height: 1.6;
+}
+
+/* Frase destacada */
+.teacher-detail-quote {
+  margin: 4px 0 0;
+  padding: 10px 14px;
+  border-left: 3px solid var(--accent);
+  background: rgba(201, 161, 91, 0.05);
+  border-radius: 8px;
+  font-style: italic;
+  color: var(--text);
+}
+.teacher-detail-quote p {
+  margin: 0;
+}
+
+/* Responsive: apilar en móvil */
+@media (max-width: 800px) {
+  .teacher-detail {
+    grid-template-columns: 1fr;
+  }
+  .teacher-detail-avatar {
+    max-width: 420px;
+    margin: 0 auto 4px;
+  }
+}
+
+/* ===== PÁGINAS INDIVIDUALES DE PROFESOR ===== */
+.teacher-profile {
+  /* reutiliza teacher-card, solo ajustamos el layout */
+  grid-template-columns: 320px 1fr;
+  gap: 22px;
+}
+
+@media (max-width: 900px) {
+  .teacher-profile {
+    grid-template-columns: 1fr;
+  }
+}
