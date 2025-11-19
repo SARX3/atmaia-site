@@ -308,7 +308,7 @@
 
         // Autoplay (respetando prefers-reduced-motion)
         const autoplay = slider.dataset.autoplay === "true";
-        const intervalMs = parseInt(slider.dataset.interval || "6000", 10);
+        const intervalMs = parseInt(slider.dataset.interval || "4000", 10);
         let timer = null;
 
         const stop = () => {
@@ -481,7 +481,7 @@
       const start = () => {
         if (prefersReducedMotion) return;
         stop();
-        timer = setInterval(next, 5000);
+        timer = setInterval(next, 2500);
       };
 
       if (!prefersReducedMotion) {
