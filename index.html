@@ -15,7 +15,10 @@
       rel="preload"
       as="image"
       href="/assets/images/hero1-atmaia-yoga.webp"
-      imagesrcset="/assets/images/hero-atmaia-yoga.webp 1920w"
+      imagesrcset="
+    /assets/images/hero1-atmaia-yoga-12001600.webp 800w,
+    /assets/images/hero1-atmaia-yoga.webp 1920w
+  "
       imagesizes="100vw"
       fetchpriority="high"
     />
@@ -97,15 +100,25 @@
       <section class="hero" aria-label="Clases de Yoga en Bogotá, El Virrey">
         <div class="hero-gallery gallery-fade">
           <div class="gallery-slide is-active">
-            <img
-              src="/assets/images/hero1-atmaia-yoga.webp"
-              alt="Yoga en Bogotá, cerca al Parque El Virrey — estudio Atmaia"
-              class="hero-img"
-              fetchpriority="high"
-              decoding="async"
-              width="1920"
-              height="1080"
-            />
+            <picture class="hero-picture">
+              <!-- Versión para CELULAR (vertical 3x4) -->
+              <source
+                srcset="/assets/images/hero1-atmaia-yoga-12001600.webp"
+                media="(max-width: 760px)"
+                type="image/webp"
+              />
+
+              <!-- Versión DESKTOP (la que ya usabas) -->
+              <img
+                src="/assets/images/hero1-atmaia-yoga.webp"
+                alt="Yoga en Bogotá, cerca al Parque El Virrey — estudio Atmaia"
+                class="hero-img"
+                fetchpriority="high"
+                decoding="async"
+                width="1920"
+                height="1080"
+              />
+            </picture>
           </div>
 
           <div class="gallery-slide">
