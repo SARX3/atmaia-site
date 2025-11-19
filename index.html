@@ -982,21 +982,27 @@
           </figcaption>
 
           <picture>
+            <!-- Versión MOBILE (celular) -->
+            <source
+              media="(max-width: 900px)"
+              type="image/webp"
+              srcset="/assets/images/planes/planes-atmaia-yoga-mobile.webp"
+            />
+
+            <!-- Versión DESKTOP -->
             <source
               type="image/webp"
-              srcset="
-                /assets/images/planes/planes-atmaia-yoga-bogota-800.webp   800w,
-                /assets/images/planes/planes-atmaia-yoga-bogota-1200.webp 1200w
-              "
-              sizes="(max-width: 900px) 92vw, 1100px"
+              srcset="/assets/images/planes/planes-atmaia-yoga-desktop.webp"
             />
+
+            <!-- Fallback (por compatibilidad) -->
             <img
-              src="/assets/images/planes/planes-atmaia-yoga-bogota-1200.webp"
+              src="/assets/images/planes/planes-atmaia-desktop.webp"
               alt="Planes y precios de clases de yoga en Atmaia Yoga Bogotá"
               loading="lazy"
               decoding="async"
               width="1200"
-              height="800"
+              height="675"
             />
           </picture>
         </figure>
