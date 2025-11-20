@@ -546,7 +546,7 @@
 
       // Autoplay configurable + prefers-reduced-motion
       const autoplay = gal.dataset.autoplay === "true";
-      const intervalMs = parseInt(gal.dataset.interval || "4800", 10);
+      const intervalMs = parseInt(gal.dataset.interval || "2500", 10);
       let timer = null;
 
       const stop = () => {

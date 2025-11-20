@@ -980,3 +980,32 @@ img {
 .card h3 {
   font-style: normal;
 }
+
+.parking-list {
+  list-style: none;
+  padding: 0;
+  margin: 18px 0 0;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  font-size: 1.05rem;
+  color: var(--muted);
+}
+
+.parking-list li {
+  background: var(--bg-contrast);
+  padding: 16px 20px;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  line-height: 1.5;
+}
+
+.parking-list strong {
+  color: var(--text);
+  font-weight: 600;
+}
+
+.parking-list em {
+  font-style: italic;
+  color: var(--accent);
+}
