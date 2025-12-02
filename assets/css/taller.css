@@ -1,0 +1,212 @@
+/* ====== PÁGINAS INDIVIDUALES DE TALLER ====== */
+
+/* Layout general */
+.taller-layout {
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  gap: 26px;
+  align-items: flex-start;
+  margin-top: 18px;
+}
+
+/* Foto grande del taller (vertical 3:4) */
+.taller-cover {
+  width: 100%;
+  max-width: 320px;
+  aspect-ratio: 3 / 4;
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: var(--shadow);
+  background: var(--bg-contrast);
+  margin: 0;
+  position: relative;
+}
+
+.taller-cover img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.taller-badge {
+  position: absolute;
+  left: 10px;
+  bottom: 10px;
+  background: rgba(0, 0, 0, 0.7);
+  color: #fff;
+  padding: 5px 10px;
+  border-radius: 999px;
+  font-size: 0.85rem;
+}
+
+/* Contenido principal */
+.taller-main {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.taller-head {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.taller-title {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 1.8rem;
+  font-weight: 600;
+  margin: 0;
+}
+
+.taller-chip-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.taller-chip {
+  border-radius: 999px;
+  padding: 4px 11px;
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  font-size: 0.88rem;
+  color: var(--muted);
+  background: #fff;
+}
+
+/* Texto de introducción */
+.taller-intro {
+  font-size: 1rem;
+  color: var(--text);
+  margin: 4px 0 2px;
+}
+
+/* Secciones de contenido */
+.taller-section {
+  margin-top: 8px;
+}
+
+.taller-section h3 {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 1.25rem;
+  margin: 0 0 6px;
+}
+
+.taller-section p {
+  margin: 0 0 6px;
+  color: var(--muted);
+}
+
+/* Listas dentro de los talleres */
+.taller-list {
+  list-style: disc;
+  padding-left: 18px;
+  margin: 4px 0 8px;
+  color: var(--muted);
+}
+
+.taller-note {
+  font-size: 0.95rem;
+  color: var(--text);
+}
+
+/* Meta tipo ficha (fechas, lugar, inversión) */
+.taller-meta {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+  display: grid;
+  gap: 4px;
+  color: var(--muted);
+}
+
+.taller-meta strong {
+  color: var(--text);
+  font-weight: 600;
+}
+
+.taller-muted {
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+/* CTA final */
+.taller-cta h3 {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 1.25rem;
+  margin: 10px 0 4px;
+}
+
+.taller-cta p {
+  margin: 0 0 10px;
+  color: var(--muted);
+}
+
+.cta-row-taller {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  align-items: center;
+}
+
+/* Reutilizamos .logo-return de otros estilos, pero por si acaso: */
+.logo-return {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  text-decoration: none;
+  color: var(--muted);
+  font-weight: 500;
+  transition: all 0.25s ease;
+}
+
+.logo-return img {
+  height: 40px;
+  width: auto;
+  border-radius: 50%;
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.logo-return:hover {
+  color: var(--accent);
+}
+
+.logo-return:hover img {
+  transform: rotate(-8deg) scale(1.05);
+  filter: brightness(1.1);
+}
+
+/* Responsive */
+@media (max-width: 880px) {
+  .taller-layout {
+    grid-template-columns: 1fr;
+    justify-items: center;
+    text-align: left;
+  }
+
+  .taller-cover {
+    max-width: 260px;
+  }
+
+  .taller-main {
+    width: 100%;
+  }
+
+  .taller-head {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+@media (max-width: 600px) {
+  .taller-layout {
+    gap: 18px;
+  }
+
+  .taller-title {
+    font-size: 1.6rem;
+  }
+}
