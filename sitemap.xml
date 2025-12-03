@@ -1,9 +1,56 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-<url><loc>https://atmaiayoga.com/</loc><lastmod>2025-10-30</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
-<url><loc>https://atmaiayoga.com/clases.html</loc><lastmod>2025-10-30</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
-<url><loc>https://atmaiayoga.com/horarios.html</loc><lastmod>2025-10-30</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
-<url><loc>https://atmaiayoga.com/nosotros.html</loc><lastmod>2025-10-30</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
-<url><loc>https://atmaiayoga.com/contacto.html</loc><lastmod>2025-10-30</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
-<url><loc>https://atmaiayoga.com/politica-privacidad.html</loc><lastmod>2025-10-30</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
+
+  <!-- Home -->
+  <url>
+    <loc>https://atmaiayoga.com/</loc>
+    <lastmod>2025-12-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+  <!-- Talleres -->
+  <url>
+    <loc>https://atmaiayoga.com/talleres.html</loc>
+    <lastmod>2025-12-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://atmaiayoga.com/talleres/yoga-principiantes.html</loc>
+    <lastmod>2025-12-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://atmaiayoga.com/talleres/yoga-prenatal.html</loc>
+    <lastmod>2025-12-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Profesores -->
+  <url>
+    <loc>https://atmaiayoga.com/profesores.html</loc>
+    <lastmod>2025-12-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url><loc>https://atmaiayoga.com/profesores/bibi.html</loc><lastmod>2025-12-03</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://atmaiayoga.com/profesores/mauricio.html</loc><lastmod>2025-12-03</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://atmaiayoga.com/profesores/mateo.html</loc><lastmod>2025-12-03</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://atmaiayoga.com/profesores/jenn.html</loc><lastmod>2025-12-03</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://atmaiayoga.com/profesores/eda.html</loc><lastmod>2025-12-03</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://atmaiayoga.com/profesores/anya.html</loc><lastmod>2025-12-03</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://atmaiayoga.com/profesores/ana-mile.html</loc><lastmod>2025-12-03</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+
+  <!-- Privacidad -->
+  <url>
+    <loc>https://atmaiayoga.com/politica-privacidad.html</loc>
+    <lastmod>2025-12-03</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+
 </urlset>
