@@ -522,6 +522,10 @@ img {
   margin-top: 20px;
 }
 
+#ubicacion .btn-row {
+  justify-content: flex-start;
+}
+
 /* Reveal */
 [data-reveal] {
   opacity: 0;
@@ -543,6 +547,7 @@ img {
   flex-wrap: wrap;
   gap: 10px;
   margin-top: 12px;
+  justify-content: center;
 }
 
 /* Horario figure */
