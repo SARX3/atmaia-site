@@ -26,8 +26,16 @@ body {
   padding-top: 0;
   background: var(--bg);
   color: var(--text);
-  font-family: "Inter", system-ui, -apple-system, Segoe UI, Roboto, Helvetica,
-    Arial, "Apple Color Emoji", "Segoe UI Emoji";
+  font-family:
+    "Inter",
+    system-ui,
+    -apple-system,
+    Segoe UI,
+    Roboto,
+    Helvetica,
+    Arial,
+    "Apple Color Emoji",
+    "Segoe UI Emoji";
   line-height: 1.6;
 }
 a {
@@ -158,10 +166,11 @@ img {
   display: block;
 }
 
-.hero-gallery .hero-picture > img,
-.hero-gallery .hero-picture > source {
+.hero-gallery .hero-picture,
+.hero-gallery .hero-picture > img {
   width: 100%;
   height: 100%;
+  display: block;
 }
 
 /* Degradado encima de la foto, debajo del texto */
@@ -230,7 +239,9 @@ img {
   background: linear-gradient(180deg, var(--accent), #b88c40);
   color: #fff;
   box-shadow: 0 6px 18px rgba(201, 161, 91, 0.25);
-  transition: transform 180ms ease, box-shadow 220ms ease;
+  transition:
+    transform 180ms ease,
+    box-shadow 220ms ease;
 }
 .btn:hover,
 .btn:focus-visible {
@@ -241,7 +252,10 @@ img {
   background: transparent;
   border: 1px solid rgba(0, 0, 0, 0.12);
   color: var(--text);
-  transition: transform 180ms ease, color 160ms ease, border-color 160ms ease,
+  transition:
+    transform 180ms ease,
+    color 160ms ease,
+    border-color 160ms ease,
     box-shadow 220ms ease;
 }
 .btn-alt:hover,
@@ -256,7 +270,9 @@ img {
 .btn:focus-visible,
 .btn-alt:focus-visible {
   outline: 2px solid rgba(0, 0, 0, 0);
-  box-shadow: 0 0 0 2px #fff, 0 0 0 4px var(--accent);
+  box-shadow:
+    0 0 0 2px #fff,
+    0 0 0 4px var(--accent);
 }
 
 /* Botón con icono (centrado y proporcional) */
@@ -422,7 +438,17 @@ img {
     gap: 10px;
   }
   .hero {
-    min-height: 80vh; /* antes 56vh → más respiro en móvil */
+    min-height: 100svh;
+  }
+  @supports (min-height: 100dvh) {
+    .hero {
+      min-height: 100dvh;
+    }
+  }
+  @media (max-width: 760px) {
+    .hero {
+      min-height: 80svh;
+    } /* o 80dvh si prefieres */
   }
 }
 
@@ -530,7 +556,9 @@ img {
 [data-reveal] {
   opacity: 0;
   transform: translateY(12px);
-  transition: opacity 0.5s ease, transform 0.6s ease;
+  transition:
+    opacity 0.5s ease,
+    transform 0.6s ease;
 }
 [data-reveal].revealed {
   opacity: 1;
@@ -600,7 +628,9 @@ img {
   inset: 0;
   opacity: 0;
   transform: translateY(6px);
-  transition: opacity 600ms ease, transform 650ms ease;
+  transition:
+    opacity 600ms ease,
+    transform 650ms ease;
   pointer-events: none;
 }
 .ts-slide.is-active {
@@ -691,7 +721,10 @@ img {
   display: grid;
   place-items: center;
   cursor: pointer;
-  transition: transform 0.18s ease, box-shadow 0.22s ease, background 0.2s ease;
+  transition:
+    transform 0.18s ease,
+    box-shadow 0.22s ease,
+    background 0.2s ease;
   z-index: 2;
 }
 .ts-control:hover {
@@ -1023,7 +1056,10 @@ img {
   color: var(--accent);
   font-weight: 600;
   text-decoration: none;
-  transition: color 0.2s ease, background-color 0.2s ease, box-shadow 0.2s ease,
+  transition:
+    color 0.2s ease,
+    background-color 0.2s ease,
+    box-shadow 0.2s ease,
     transform 0.15s ease;
 }
 

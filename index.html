@@ -11,15 +11,20 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <!-- Preload del hero (CRÍTICO para LCP) -->
+
+    <link
+      rel="preload"
+      as="image"
+      href="/assets/images/hero1-atmaia-yoga-12001600.webp"
+      media="(max-width: 760px)"
+      fetchpriority="high"
+    />
+
     <link
       rel="preload"
       as="image"
       href="/assets/images/hero1-atmaia-yoga.webp"
-      imagesrcset="
-    /assets/images/hero1-atmaia-yoga-12001600.webp 800w,
-    /assets/images/hero1-atmaia-yoga.webp 1920w
-  "
-      imagesizes="100vw"
+      media="(min-width: 761px)"
       fetchpriority="high"
     />
 
@@ -109,6 +114,13 @@
               />
 
               <!-- Versión DESKTOP (la que ya usabas) -->
+
+              <source
+                srcset="/assets/images/hero1-atmaia-yoga.webp"
+                media="(min-width: 761px)"
+                type="image/webp"
+              />
+
               <img
                 src="/assets/images/hero1-atmaia-yoga.webp"
                 alt="Yoga en Bogotá, cerca al Parque El Virrey — estudio Atmaia"
@@ -116,7 +128,7 @@
                 fetchpriority="high"
                 decoding="async"
                 width="1920"
-                height="1080"
+                height="1440"
               />
             </picture>
           </div>
@@ -362,7 +374,7 @@
                 <div class="mg-slide">
                   <img
                     src="/assets/images/galeria/comunidad-3-1200.webp"
-                    alt="con estudiantes de Atmaia Yoga al aire libre en el Parque El Virrey"
+                    alt="Con estudiantes de Atmaia Yoga al aire libre en el Parque El Virrey"
                     loading="lazy"
                     decoding="async"
                     width="1200"
@@ -526,9 +538,9 @@
         <p class="muted" style="text-align: center; margin-top: 12px">
           ¿Quieres inscribirte o tienes dudas sobre los horarios?<br />
           <a
-            href="https://wa.me/573209432003?text=Hola%20Atmaia%20Yoga,%20quiero%20más%20información%20sobre%20las%20clases%20y%20horarios"
+            href="https://wa.me/573209432003?text=Hola%20Atmaia%20Yoga%2C%20quiero%20m%C3%A1s%20informaci%C3%B3n%20sobre%20las%20clases%20y%20horarios%20%E2%9C%A8"
             target="_blank"
-            rel="noopener"
+            rel="noopener noreferrer"
             class="btn btn-alt"
             style="margin-top: 8px"
           >
@@ -570,7 +582,7 @@
 
               <div class="mg-slide">
                 <img
-                  src="/assets/images/galeria/clase_3_anamile clase_hatha_flow_studio.webp"
+                  src="/assets/images/galeria/clase_3_anamile_hatha_flow_studio.webp"
                   alt="Ambiente del estudio durante clase de prueba"
                   loading="lazy"
                   decoding="async"
@@ -605,9 +617,9 @@
             </div>
 
             <a
-              href="https://wa.me/573209432003?text=Hola,%20quiero%20agendar%20mi%20clase%20de%20prueba%20en%20Atmaia%20Yoga%20🌿"
+              href="https://wa.me/573209432003?text=Hola%2C%20quiero%20agendar%20mi%20clase%20de%20prueba%20en%20Atmaia%20Yoga%20%E2%9C%A8"
               target="_blank"
-              rel="noopener"
+              rel="noopener noreferrer"
               class="btn btn-alt"
             >
               Agendar clase
@@ -657,9 +669,9 @@
             </div>
 
             <a
-              href="https://wa.me/573209432003?text=Hola%20Atmaia,%20quiero%20confirmar%20mi%20asistencia%20a%20la%20clase%20en%20el%20Parque%20El%20Virrey%20🌿"
+              href="https://wa.me/573209432003?text=Hola%20Atmaia%2C%20quiero%20confirmar%20mi%20asistencia%20a%20la%20clase%20en%20el%20Parque%20El%20Virrey%20%E2%9C%A8"
               target="_blank"
-              rel="noopener"
+              rel="noopener noreferrer"
               class="btn btn-alt"
             >
               Confirmar
@@ -697,7 +709,7 @@
               class="btn btn-alt rating-link"
               href="https://www.google.com/maps/place/ATMAIA+YOGA+STUDIO/@4.6719869,-74.0582294,17z/data=!4m8!3m7!1s0x8e3f9b005e2e932b:0x4bf3c037ba269c56!8m2!3d4.6719869!4d-74.0556545!9m1!1b1!16s%2Fg%2F11w4h09vdw?entry=ttu"
               target="_blank"
-              rel="noopener"
+              rel="noopener noreferrer"
               aria-label="Ver reseñas de Atmaia Yoga en Google"
             >
               Ver reseñas en Google
@@ -867,7 +879,7 @@
             <a
               href="https://www.google.com/maps/place/ATMAIA+YOGA+STUDIO/@4.6719869,-74.0582294,17z/data=!4m8!3m7!1s0x8e3f9b005e2e932b:0x4bf3c037ba269c56!8m2!3d4.6719869!4d-74.0556545!9m1!1b1!16s%2Fg%2F11w4h09vdw?entry=ttu"
               target="_blank"
-              rel="noopener"
+              rel="noopener noreferrer"
               >ver todas en Google</a
             >.
           </p>
@@ -1009,7 +1021,7 @@
 
             <!-- Fallback (por compatibilidad) -->
             <img
-              src="/assets/images/planes/planes-atmaia-desktop.webp"
+              src="/assets/images/planes/planes-atmaia-yoga-desktop.webp"
               alt="Planes y precios de clases de yoga en Atmaia Yoga Bogotá"
               loading="lazy"
               decoding="async"
@@ -1023,9 +1035,9 @@
           ¿Listo para comenzar tu práctica?<br />
           <a
             class="btn"
-            href="https://wa.me/573209432003?text=Hola%20Atmaia%20Yoga,%20quiero%20inscribirme%20a%20uno%20de%20los%20planes%20🙌"
+            href="https://wa.me/573209432003?text=Hola%20Atmaia%20Yoga%2C%20quiero%20inscribirme%20a%20uno%20de%20los%20planes%20%E2%9C%A8"
             target="_blank"
-            rel="noopener"
+            rel="noopener noreferrer"
             style="margin-top: 8px"
             >Inscribirme</a
           >
@@ -1267,9 +1279,9 @@
             <a class="btn" href="/talleres.html">Ver todos</a>
             <a
               class="btn btn-alt"
-              href="https://wa.me/573209432003?text=Hola,%20quiero%20más%20información%20sobre%20los%20talleres%20y%20eventos%20🌿"
+              href="https://wa.me/573209432003?text=Hola%2C%20quiero%20m%C3%A1s%20informaci%C3%B3n%20sobre%20los%20talleres%20y%20eventos%20%E2%9C%A8"
               target="_blank"
-              rel="noopener"
+              rel="noopener noreferrer"
             >
               Escríbenos
             </a>
@@ -1337,7 +1349,7 @@
                 <a
                   href="https://maps.app.goo.gl/T7izDmtnjQe7h6Fh8"
                   target="_blank"
-                  rel="noopener"
+                  rel="noopener noreferrer"
                   class="parking-link"
                 >
                   Carulla Calle 85
@@ -1352,7 +1364,7 @@
                 <a
                   href="https://maps.app.goo.gl/7JJ3LBxmUmhTaVWX7"
                   target="_blank"
-                  rel="noopener"
+                  rel="noopener noreferrer"
                   class="parking-link"
                 >
                   Parqueadero Carrera 18
@@ -1367,7 +1379,7 @@
                 <a
                   href="https://maps.app.goo.gl/2fm8KF3PiZi1qYSDA"
                   target="_blank"
-                  rel="noopener"
+                  rel="noopener noreferrer"
                   class="parking-link"
                 >
                   Parque El Virrey - Zonas azules
@@ -1413,7 +1425,7 @@
               <a
                 href="https://www.google.com/maps/search/?api=1&query=Carrera+16A+%2386A-02+Oficina+304%2C+Bogot%C3%A1"
                 target="_blank"
-                rel="noopener"
+                rel="noopener noreferrer"
               >
                 Carrera 16A #86A-02, Oficina 304, Bogotá<br />
                 <span class="muted">(a una cuadra del Parque El Virrey)</span>
@@ -1437,7 +1449,7 @@
                 />
               </svg>
               <a
-                href="mailto:info@atmaiayoga.com"
+                href="mailto:info@atmaiayoga.com?subject=Informaci%C3%B3n%20clases%20Atmaia%20Yoga&body=Hola%20Atmaia%20Yoga%2C%0A%0Aquiero%20m%C3%A1s%20informaci%C3%B3n%20sobre%20las%20clases%20y%20horarios%20%E2%9C%A8"
                 aria-label="Enviar correo a Atmaia Yoga"
                 >info@atmaiayoga.com</a
               >
@@ -1460,9 +1472,9 @@
                 />
               </svg>
               <a
-                href="https://wa.me/573209432003"
+                href="https://wa.me/573209432003?text=Hola%2C%20quiero%20m%C3%A1s%20informaci%C3%B3n%20sobre%20las%20clases%20y%20horarios%20%E2%9C%A8"
                 target="_blank"
-                rel="noopener"
+                rel="noopener noreferrer"
                 >+57 320 943 2003</a
               >
             </li>
@@ -1483,7 +1495,7 @@
               <a
                 href="https://www.instagram.com/atmaiayoga"
                 target="_blank"
-                rel="noopener"
+                rel="noopener noreferrer"
                 >Instagram</a
               >
             </li>
@@ -1507,7 +1519,7 @@
               <a
                 href="https://www.facebook.com/profile.php?id=61562889311606"
                 target="_blank"
-                rel="noopener"
+                rel="noopener noreferrer"
                 >Facebook</a
               >
             </li>
