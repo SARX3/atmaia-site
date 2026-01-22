@@ -128,7 +128,7 @@
                 fetchpriority="high"
                 decoding="async"
                 width="1920"
-                height="1440"
+                height="1080"
               />
             </picture>
           </div>
@@ -519,18 +519,18 @@
             <source
               type="image/webp"
               srcset="
-                /assets/images/horarios/horario-atmaia-yoga-2025-11-800.webp   800w,
-                /assets/images/horarios/horario-atmaia-yoga-2025-11-1200.webp 1200w
+                /assets/images/horarios/horario-atmaia-yoga-mobile-800x565.webp    800w,
+                /assets/images/horarios/horario-atmaia-yoga-desktop-1200x848.webp 1200w
               "
               sizes="(max-width: 900px) 92vw, 1100px"
             />
             <img
-              src="/assets/images/horarios/horario-atmaia-yoga-2025-11-1200.webp"
+              src="/assets/images/horarios/horario-atmaia-yoga-desktop-1200x848.webp"
               alt="Horario de clases vigente de Atmaia Yoga"
               loading="lazy"
               decoding="async"
               width="1200"
-              height="800"
+              height="848"
             />
           </picture>
         </figure>
@@ -1006,25 +1006,24 @@
           </figcaption>
 
           <picture>
-            <!-- Versión MOBILE (celular) -->
             <source
               media="(max-width: 900px)"
               type="image/webp"
               srcset="
                 /assets/images/planes/planes-atmaia-yoga-mobile-900x1200.webp
               "
+              sizes="(max-width: 900px) 92vw, 720px"
             />
 
-            <!-- Versión DESKTOP -->
             <source
               media="(min-width: 901px)"
               type="image/webp"
               srcset="
                 /assets/images/planes/planes-atmaia-yoga-desktop-1200x900.webp
               "
+              sizes="(max-width: 900px) 92vw, 720px"
             />
 
-            <!-- Fallback -->
             <img
               src="/assets/images/planes/planes-atmaia-yoga-desktop-1200x900.webp"
               alt="Planes y precios de clases de yoga en Atmaia Yoga Bogotá"
@@ -1032,6 +1031,7 @@
               decoding="async"
               width="1200"
               height="900"
+              sizes="(max-width: 900px) 92vw, 720px"
             />
           </picture>
         </figure>

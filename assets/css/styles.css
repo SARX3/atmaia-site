@@ -118,16 +118,42 @@ img {
   margin: 0;
 }
 
-/* Hero */
-/* Hero */
+/* =========================================================
+   HERO (CORREGIDO: sin 100vh + sin @media anidado)
+   ========================================================= */
+
+/* Base: evita bugs de 100vh */
 .hero {
   position: relative;
-  min-height: 100vh;
+  min-height: 100svh;
   display: grid;
   place-items: center;
   text-align: center;
   color: var(--text);
   overflow: hidden;
+}
+
+/* Mejor soporte moderno */
+@supports (min-height: 100dvh) {
+  .hero {
+    min-height: 100dvh;
+  }
+}
+
+/* Mobile: un poco más corto */
+@media (max-width: 760px) {
+  .hero {
+    min-height: 80svh;
+  }
+}
+
+/* Opcional: mejor soporte moderno mobile */
+@supports (min-height: 80dvh) {
+  @media (max-width: 760px) {
+    .hero {
+      min-height: 80dvh;
+    }
+  }
 }
 
 /* Fondo del hero: galería en fade ocupando todo */
@@ -145,7 +171,6 @@ img {
   opacity: 0;
   transition: opacity 900ms ease-in-out;
 }
-
 .hero-gallery .gallery-slide.is-active {
   opacity: 1;
 }
@@ -165,7 +190,6 @@ img {
   height: 100%;
   display: block;
 }
-
 .hero-gallery .hero-picture,
 .hero-gallery .hero-picture > img {
   width: 100%;
@@ -184,10 +208,9 @@ img {
 
 /* Contenedor del contenido del hero (texto) */
 .hero .hero-inner {
-  /* .hero-inner también tiene .wrap => ya trae max-width y padding lateral */
   position: relative;
   padding: clamp(24px, 4vw, 56px) 0 clamp(32px, 5vw, 60px);
-  z-index: 0; /* por encima del gradiente/fondo */
+  z-index: 0;
 }
 
 /* Título del hero */
@@ -212,7 +235,7 @@ img {
 /* CTA del hero: flotando cerca del bottom, centrado */
 .hero-cta {
   position: absolute;
-  bottom: 35px; /* ⬅ este valor sí controla la distancia al fondo */
+  bottom: 35px;
   left: 50%;
   transform: translateX(-50%);
   display: flex;
@@ -280,14 +303,13 @@ img {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  gap: 0.6em; /* espacio proporcional al tamaño del texto */
+  gap: 0.6em;
   line-height: 1;
 }
-
 .btn-with-icon .btn-icon {
   color: #ffffff;
   flex: 0 0 auto;
-  width: 2em; /* escala con el tamaño de la fuente */
+  width: 2em;
   height: 2em;
   display: inline-block;
   filter: drop-shadow(0 0 2px rgba(0, 0, 0, 0.2));
@@ -304,11 +326,10 @@ img {
 
 /* Asegura texto e icono en blanco dentro del botón primario */
 .btn-primary {
-  color: #fff; /* color del texto e "currentColor" */
+  color: #fff;
 }
-
 .btn-primary .btn-icon {
-  color: currentColor; /* el SVG inline hereda este color para su fill */
+  color: currentColor;
 }
 
 /* Secciones / Cards */
@@ -381,7 +402,7 @@ img {
 }
 #clases .card p {
   margin-bottom: 0.5rem;
-  min-height: 5.4em; /* ⬅️ más alto para alinear las fotos de las dos cards */
+  min-height: 5.4em;
 }
 #clases .card .btn,
 #clases .card .btn-alt {
@@ -436,19 +457,6 @@ img {
   }
   .cta-row {
     gap: 10px;
-  }
-  .hero {
-    min-height: 100svh;
-  }
-  @supports (min-height: 100dvh) {
-    .hero {
-      min-height: 100dvh;
-    }
-  }
-  @media (max-width: 760px) {
-    .hero {
-      min-height: 80svh;
-    } /* o 80dvh si prefieres */
   }
 }
 
@@ -547,7 +555,6 @@ img {
 .ubicacion-content {
   margin-top: 20px;
 }
-
 #ubicacion .btn-row {
   justify-content: flex-start;
 }
@@ -756,7 +763,6 @@ img {
   background: var(--accent);
 }
 @media (max-width: 760px) {
-  /* En móvil ya no usamos grid: todo en columna, ancho completo */
   .ts-card {
     display: flex;
     flex-direction: column;
@@ -765,27 +771,21 @@ img {
     padding: 16px 14px 20px;
     gap: 10px;
   }
-
   .ts-avatar {
     width: 88px;
     height: 88px;
     margin: 0 auto 4px;
   }
-
   .ts-author {
     text-align: center;
   }
-
   .ts-quote {
     width: 100%;
     text-align: left;
   }
-
   .ts-more {
     align-self: center;
   }
-
-  /* Flechas del carrusel ocultas en móvil */
   .ts-control {
     display: none;
   }
@@ -983,8 +983,6 @@ img {
 }
 
 /* ===== Layout específico de la sección "Nosotros" ===== */
-
-/* Mobile / base: 1 columna, centrado */
 .grid.cols-3.nosotros-grid {
   margin-top: 24px;
   display: grid;
@@ -1001,20 +999,17 @@ img {
     margin-right: auto;
     justify-items: center;
   }
-
-  /* La tercera card ocupa solo 1 columna y se centra */
   .card-nosotros-wide {
-    grid-column: 1 / -1; /* ocupa el ancho completo del grid */
-    max-width: 480px; /* mismo ancho que las superiores */
-    margin: 0 auto; /* centrada */
+    grid-column: 1 / -1;
+    max-width: 480px;
+    margin: 0 auto;
   }
 }
+
 /* Cursiva para todo el texto dentro de las cards (excepto títulos) */
 .card {
   font-style: italic;
 }
-
-/* Aseguramos que los títulos NO sean cursivos */
 .card h3 {
   font-style: normal;
 }
@@ -1029,7 +1024,6 @@ img {
   font-size: 1.05rem;
   color: var(--muted);
 }
-
 .parking-list li {
   background: var(--bg-contrast);
   padding: 16px 20px;
@@ -1037,12 +1031,10 @@ img {
   box-shadow: var(--shadow);
   line-height: 1.5;
 }
-
 .parking-list strong {
   color: var(--text);
   font-weight: 600;
 }
-
 .parking-list em {
   font-style: italic;
   color: var(--accent);
@@ -1062,11 +1054,10 @@ img {
     box-shadow 0.2s ease,
     transform 0.15s ease;
 }
-
 .parking-link:hover,
 .parking-link:focus-visible {
-  color: #b78c3d; /* un poco más oscuro */
-  background-color: rgba(201, 161, 91, 0.12); /* halo dorado suave */
+  color: #b78c3d;
+  background-color: rgba(201, 161, 91, 0.12);
   box-shadow: 0 0 0 1px rgba(201, 161, 91, 0.45);
   transform: translateY(-1px);
 }
