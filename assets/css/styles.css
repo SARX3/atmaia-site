@@ -175,6 +175,11 @@ img {
   opacity: 1;
 }
 
+/* Hero sin dots (solo 2 slides) */
+.hero-gallery .gallery-dots {
+  display: none;
+}
+
 /* Imagen del hero */
 .hero-gallery img.hero-img {
   width: 100%;
@@ -315,13 +320,14 @@ img {
   filter: drop-shadow(0 0 2px rgba(0, 0, 0, 0.2));
 }
 
-/* Icono SVG hereda el color del botón */
-.btn-with-icon .btn-icon path,
-.btn-with-icon .btn-icon circle,
-.btn-with-icon .btn-icon rect,
-.btn-with-icon .btn-icon polygon {
+/* SVG del botón: control correcto */
+.btn-with-icon .btn-icon .icon-fill {
   fill: currentColor;
-  stroke: none;
+}
+
+.btn-with-icon .btn-icon .icon-stroke {
+  fill: none;
+  stroke: rgba(0, 0, 0, 0.45);
 }
 
 /* Asegura texto e icono en blanco dentro del botón primario */
