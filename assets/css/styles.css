@@ -112,6 +112,7 @@ img {
   font-weight: 500;
   font-size: clamp(1.25rem, 2vw, 1.6rem);
   background: linear-gradient(90deg, var(--accent), #b78c3d);
+  background-clip: text; /* estándar */
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   letter-spacing: 0.4px;
