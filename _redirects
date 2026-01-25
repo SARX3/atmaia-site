@@ -1,3 +1,5 @@
-https://www.atmaiayoga.com/*  https://atmaiayoga.com/:splat  301!
-http://atmaiayoga.com/*       https://atmaiayoga.com/:splat  301!
-http://www.atmaiayoga.com/*   https://atmaiayoga.com/:splat  301!
+https://www.atmaiayoga.com/_ https://atmaiayoga.com/:splat 301!
+http://atmaiayoga.com/_ https://atmaiayoga.com/:splat 301!
+http://www.atmaiayoga.com/* https://atmaiayoga.com/:splat 301!
+/profesores/mateo-rudd.html /profesores.html 301
+/profesores/mauricio-saenz.html /profesores.html 301
